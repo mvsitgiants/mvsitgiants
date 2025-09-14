@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             <NavLink to="/" className="flex-shrink-0">
               <img 
                 src="/logomvs.png" 
-                alt="MVS IT Giants" 
+                alt="MVS IT GIANT" 
                 className="h-12 w-auto"
               />
             </NavLink>

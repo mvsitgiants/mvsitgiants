@@ -83,7 +83,7 @@ const Services: React.FC = () => {
     "description": "Comprehensive software development services including custom software development, mobile app development, cloud solutions, AI/ML, UI/UX design, and IT consulting.",
     "provider": {
       "@type": "Organization",
-      "name": "MVS IT Giants",
+      "name": "MVS IT GIANT",
       "url": "https://mvsitgiants.com"
     },
     "serviceType": "Software Development",
@@ -141,7 +141,7 @@ const Services: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="Software Development Services | Custom Software, Mobile Apps & Cloud Solutions - MVS IT Giants"
+        title="Software Development Services | Custom Software, Mobile Apps & Cloud Solutions - MVS IT GIANT"
         description="Discover our comprehensive software development services including custom software development, mobile app development, cloud solutions, AI/ML, UI/UX design, and IT consulting. Expert solutions for your business needs."
         keywords="software development services, custom software development, mobile app development, cloud solutions, DevOps, AI machine learning services, UI UX design services, IT consulting, web development services, enterprise software solutions"
         canonical="https://mvsitgiants.com/services"

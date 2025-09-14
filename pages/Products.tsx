@@ -62,11 +62,11 @@ const Products: React.FC = () => {
     "description": "Comprehensive software products including hospital management system, restaurant management software, school management system, and POS systems.",
     "brand": {
       "@type": "Brand",
-      "name": "MVS IT Giants"
+      "name": "MVS IT GIANT"
     },
     "manufacturer": {
       "@type": "Organization",
-      "name": "MVS IT Giants"
+      "name": "MVS IT GIANT"
     },
     "offers": {
       "@type": "Offer",
@@ -101,7 +101,7 @@ const Products: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="Software Products & Solutions | Hospital Management, POS System, School Management - MVS IT Giants"
+        title="Software Products & Solutions | Hospital Management, POS System, School Management - MVS IT GIANT"
         description="Explore our innovative software products including hospital management system, restaurant management software, school management system, and next-gen POS systems. Built with modern technology for optimal performance."
         keywords="hospital management system, restaurant management software, school management system, POS system, healthcare IT solutions, educational software, hospitality technology, retail management software, enterprise software products"
         canonical="https://mvsitgiants.com/products"

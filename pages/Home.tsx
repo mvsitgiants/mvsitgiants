@@ -146,7 +146,7 @@ const Home: React.FC = () => {
   const homeStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "MVS IT Giants",
+    "name": "MVS IT GIANT",
     "description": "Leading software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
     "url": "https://mvsitgiants.com",
     "potentialAction": {
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "MVS IT Giants",
+      "name": "MVS IT GIANT",
       "logo": "https://mvsitgiants.com/logomvs.png"
     }
   };
@@ -164,8 +164,8 @@ const Home: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="MVS IT Giants - Leading Software Development Company | Custom Software, Mobile Apps & IT Solutions"
-        description="Transform your business with MVS IT Giants' innovative software development services. We specialize in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. Based in Bangalore, India."
+        title="MVS IT GIANT - Leading Software Development Company | Custom Software, Mobile Apps & IT Solutions"
+        description="Transform your business with MVS IT GIANT' innovative software development services. We specialize in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. Based in Bangalore, India."
         keywords="software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting, Bangalore software company, digital transformation, enterprise software solutions"
         canonical="https://mvsitgiants.com"
         structuredData={homeStructuredData}
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
           {/* Text Content */}
           <div className="text-center">
             <h1 className="text-primary font-semibold text-4xl md:text-5xl leading-tight">
-              MVS IT Giants: <span className="text-accent">Leading Software Development Company</span>
+              MVS IT GIANT: <span className="text-accent">Leading Software Development Company</span>
             </h1>
             <p className="mt-4 text-lg text-hero-text max-w-4xl mx-auto">
               We are a premier software development company specializing in custom software development, mobile app development, cloud solutions, and AI/ML technologies. Our expert team delivers innovative digital solutions that transform businesses and drive growth.
@@ -378,7 +378,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
             <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
-                Why Choose <span className="text-accent">MVS IT Giants?</span>
+                Why Choose <span className="text-accent">MVS IT GIANT?</span>
                 </h2>
                 <p className="mt-4 max-w-3xl mx-auto text-xl text-muted">
                 Your success is our bottom line. Here's what makes us different.

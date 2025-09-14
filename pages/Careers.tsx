@@ -52,11 +52,11 @@ const Careers: React.FC = () => {
   const careersStructuredData = {
     "@context": "https://schema.org",
     "@type": "JobPosting",
-    "title": "Software Development Careers at MVS IT Giants",
-    "description": "Join MVS IT Giants and be part of our innovative software development team. We're looking for talented professionals in frontend development, DevOps, UX/UI design, and product management.",
+    "title": "Software Development Careers at MVS IT GIANT",
+    "description": "Join MVS IT GIANT and be part of our innovative software development team. We're looking for talented professionals in frontend development, DevOps, UX/UI design, and product management.",
     "hiringOrganization": {
       "@type": "Organization",
-      "name": "MVS IT Giants",
+      "name": "MVS IT GIANT",
       "sameAs": "https://mvsitgiants.com"
     },
     "jobLocation": [
@@ -91,24 +91,24 @@ const Careers: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="Careers at MVS IT Giants | Software Development Jobs | Join Our Team"
-        description="Join MVS IT Giants and be part of our innovative software development team. Explore exciting career opportunities in frontend development, DevOps, UX/UI design, and product management. Remote and on-site positions available."
-        keywords="careers at MVS IT Giants, software development jobs, frontend developer jobs, DevOps engineer jobs, UX UI designer jobs, product manager jobs, technology careers, software company jobs Bangalore, remote software jobs"
+        title="Careers at MVS IT GIANT | Software Development Jobs | Join Our Team"
+        description="Join MVS IT GIANT and be part of our innovative software development team. Explore exciting career opportunities in frontend development, DevOps, UX/UI design, and product management. Remote and on-site positions available."
+        keywords="careers at MVS IT GIANT, software development jobs, frontend developer jobs, DevOps engineer jobs, UX UI designer jobs, product manager jobs, technology careers, software company jobs Bangalore, remote software jobs"
         canonical="https://mvsitgiants.com/careers"
         structuredData={careersStructuredData}
       />
       <Hero
         title="Here’s An Opportunity you Can’t Resists"
-        subtitle="MVS IT Giants is looking for talented and Passionate people to Join our team."
+        subtitle="MVS IT GIANT is looking for talented and Passionate people to Join our team."
         backgroundImage={`/asset/careerhero.png`}
       />
 
-      {/* Life at MVS IT Giants Section */}
+      {/* Life at MVS IT GIANT Section */}
       <section className="py-24 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-extrabold text-primary mb-4 sm:text-4xl lg:text-5xl">Life at MVS IT Giants</h2>
+              <h2 className="text-3xl font-extrabold text-primary mb-4 sm:text-4xl lg:text-5xl">Life at MVS IT GIANT</h2>
               <p className="text-muted mb-8 text-lg">
                 We believe in creating an environment where our team can thrive both personally and professionally. Our culture is built on trust, innovation, and a shared passion for excellence.
               </p>

@@ -45,11 +45,11 @@ const About: React.FC = () => {
   const aboutStructuredData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About MVS IT Giants",
-    "description": "Learn about MVS IT Giants, a leading software development company founded in 2020. Discover our story, values, and the passionate team behind our innovative technology solutions.",
+    "name": "About MVS IT GIANT",
+    "description": "Learn about MVS IT GIANT, a leading software development company founded in 2020. Discover our story, values, and the passionate team behind our innovative technology solutions.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "MVS IT Giants",
+      "name": "MVS IT GIANT",
       "foundingDate": "2020",
       "description": "A collective of thinkers, creators, and innovators passionate about technology and delivering exceptional software solutions.",
       "founder": [
@@ -76,14 +76,14 @@ const About: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="About MVS IT Giants | Leading Software Development Company | Our Story & Team"
-        description="Learn about MVS IT Giants, a premier software development company founded in 2020. Discover our story, core values, and the passionate team behind our innovative technology solutions and digital transformation services."
-        keywords="about MVS IT Giants, software development company story, technology company Bangalore, software development team, company values, digital transformation experts, innovative software solutions, technology leadership"
+        title="About MVS IT GIANT | Leading Software Development Company | Our Story & Team"
+        description="Learn about MVS IT GIANT, a premier software development company founded in 2020. Discover our story, core values, and the passionate team behind our innovative technology solutions and digital transformation services."
+        keywords="about MVS IT GIANT, software development company story, technology company Bangalore, software development team, company values, digital transformation experts, innovative software solutions, technology leadership"
         canonical="https://mvsitgiants.com/about"
         structuredData={aboutStructuredData}
       />
       <Hero
-        title="About MVS IT Giants"
+        title="About MVS IT GIANT"
         subtitle="We are a collective of thinkers, creators, and innovators passionate about technology."
         backgroundImage={`/asset/aboutushero.png`}
       />
@@ -95,7 +95,7 @@ const About: React.FC = () => {
             <div className="order-2 md:order-1">
               <h2 className="text-3xl font-extrabold text-primary mb-4 sm:text-4xl lg:text-5xl">Our Story</h2>
               <p className="text-muted mb-4 text-lg">
-                Founded in 2020, MVS IT Giants was born from a shared vision: to create a software company that not only delivered technically excellent products but also fostered true partnerships with its clients. We saw a gap between what businesses needed and what traditional development shops offered.
+                Founded in 2020, MVS IT GIANT was born from a shared vision: to create a software company that not only delivered technically excellent products but also fostered true partnerships with its clients. We saw a gap between what businesses needed and what traditional development shops offered.
               </p>
               <p className="text-muted text-lg">
                 We set out to bridge that gap by combining deep technical expertise with a collaborative, transparent approach. Today, we are proud to have helped dozens of startups and enterprises launch successful digital products and transform their operations.

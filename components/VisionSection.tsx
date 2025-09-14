@@ -12,7 +12,7 @@ const VisionSection: React.FC = () => {
             <div className="relative">
               <div className="absolute -left-4 -top-4 w-full h-full bg-blue-500/20 rounded-lg transform rotate-[-3deg]"></div>
               <img
-                alt="MVS IT Giants Vision - Leading software development company with innovative technology solutions and digital transformation services"
+                alt="MVS IT GIANT Vision - Leading software development company with innovative technology solutions and digital transformation services"
                 className="w-full align-middle rounded-lg shadow-xl relative object-cover"
                 src="/asset/ourvision.png"
               />

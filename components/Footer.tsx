@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <img 
               src="/logomvs.png" 
-              alt="MVS IT Giants" 
+              alt="MVS IT GIANT" 
               className="h-12 w-auto"
             />
             <p className="text-sm">Leading software development company specializing in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. We deliver cutting-edge technology solutions to transform your business.</p>
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-muted/20 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} MVS IT Giants. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MVS IT GIANT. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

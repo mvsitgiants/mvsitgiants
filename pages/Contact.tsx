@@ -94,11 +94,11 @@ const Contact: React.FC = () => {
   const contactStructuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact MVS IT Giants",
-    "description": "Get in touch with MVS IT Giants for your software development needs. Contact us for custom software development, mobile app development, cloud solutions, and IT consulting services.",
+    "name": "Contact MVS IT GIANT",
+    "description": "Get in touch with MVS IT GIANT for your software development needs. Contact us for custom software development, mobile app development, cloud solutions, and IT consulting services.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "MVS IT Giants",
+      "name": "MVS IT GIANT",
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -129,9 +129,9 @@ const Contact: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="Contact MVS IT Giants | Software Development Company | Get In Touch"
-        description="Contact MVS IT Giants for expert software development services. Reach out for custom software development, mobile app development, cloud solutions, and IT consulting. Located in Bangalore, India."
-        keywords="contact MVS IT Giants, software development company contact, custom software development inquiry, mobile app development consultation, cloud solutions contact, IT consulting services, Bangalore software company contact"
+        title="Contact MVS IT GIANT | Software Development Company | Get In Touch"
+        description="Contact MVS IT GIANT for expert software development services. Reach out for custom software development, mobile app development, cloud solutions, and IT consulting. Located in Bangalore, India."
+        keywords="contact MVS IT GIANT, software development company contact, custom software development inquiry, mobile app development consultation, cloud solutions contact, IT consulting services, Bangalore software company contact"
         canonical="https://mvsitgiants.com/contact"
         structuredData={contactStructuredData}
       />
