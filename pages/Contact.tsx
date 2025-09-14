@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
       <Hero
         title="Contact Us"
         subtitle="We'd love to hear from you. Whether you have a question about our services or want to start a project, we're ready to answer."
-        backgroundImage={`https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1740&auto=format&fit=crop`}
+        backgroundImage={`/asset/contactushero.jpg`}
       />
 
       <section className="py-20 bg-secondary">
