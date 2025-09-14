@@ -15,8 +15,8 @@ const SEO: React.FC<SEOProps> = ({
   title = "MVS IT GIANT - Leading Software Development Company",
   description = "MVS IT GIANT is a premier software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
   keywords = "software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting",
-  canonical = "https://mvsitgiants.com",
-  ogImage = "https://mvsitgiants.com/logomvs.png",
+  canonical = "https://mvsitgiant.com",
+  ogImage = "https://mvsitgiant.com/logomvs.png",
   ogType = "website",
   structuredData
 }) => {

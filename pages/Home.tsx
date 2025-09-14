@@ -188,9 +188,9 @@ const Home: React.FC = () => {
             </p>
           </div>
         
-          {/* Scrollable Services */}
+          {/* Scrollable Services - Added By Bhushan on 15_01_2025 - Fixed mobile horizontal scroll */}
           <div className="w-full max-w-7xl mx-auto mt-12 mb-10">
-            <div className="flex space-x-4 sm:space-x-6 pb-4 overflow-x-auto no-scrollbar">
+            <div className="flex space-x-4 sm:space-x-6 pb-4 overflow-x-auto no-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               <div className="flex-shrink-0 w-2 sm:w-0"></div>
               {heroServices.map((service, index) => (
                 <div key={index} className="flex-shrink-0 w-60 sm:w-64 bg-white/60 backdrop-blur-lg p-6 rounded-xl border border-slate-300/30 shadow-lg text-left transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
