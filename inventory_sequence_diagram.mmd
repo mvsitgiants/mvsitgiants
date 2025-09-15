@@ -1,0 +1,45 @@
+
+sequenceDiagram
+  autonumber
+  actor Supplier
+  actor MainMgr as Main Warehouse Manager
+  actor SubMgr as Sub Warehouse Manager
+  actor Inspector as Quality Inspector
+  participant System as Inventory System
+
+  Supplier->>System: Deliver goods (physical)
+  MainMgr->>System: Create GRN (supplier, warehouse, items)
+  System-->>MainMgr: GRN created (Pending) + team notified
+
+  MainMgr->>System: Send GRN to Quality Test
+  alt Items with qcRequired=false
+    System-->>MainMgr: Auto-complete items (QC not required)
+  end
+  System-->>Inspector: Items ready for QC (Ready Qc/Partial)
+
+  Inspector->>System: Perform QC (Serial/Batches with results)
+  System-->>Inspector: QC recorded, item totals updated
+  System-->>MainMgr: GRN status recalculated (Partial/Completed) + notified
+
+  MainMgr->>System: Create Warehouse Transfer (Main -> Sub)
+  System-->>MainMgr: Transfer created (Pending) + notified
+  MainMgr->>System: Approve Transfer
+  par Serial items
+    System-->>System: Move serial records to Sub
+  and Batch items
+    System-->>System: Split quantities, move to Sub
+  end
+  System-->>MainMgr: Transfer status = In Transfer + notified
+  SubMgr->>System: Acknowledge Transfer
+  System-->>SubMgr: Transfer Complete + notified
+
+  SubMgr->>System: Assign Locations to received lots/serials
+  System-->>SubMgr: Location assignments saved
+
+  SubMgr->>System: Return Items to Main (Serial or Batch)
+  alt Serial
+    System-->>System: Move serial back to Main
+  else Batch
+    System-->>System: Split or move batch back to Main
+  end
+  System-->>SubMgr: Return recorded

@@ -46,7 +46,7 @@ const About: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About MVS IT GIANT",
-    "description": "Learn about MVS IT GIANT, a leading software development company founded in 2020. Discover our story, values, and the passionate team behind our innovative technology solutions.",
+    "description": "Learn about MVS IT GIANT, a leading software development company founded in 2022. Discover our story, values, and the passionate team behind our innovative technology solutions.",
     "mainEntity": {
       "@type": "Organization",
       "name": "MVS IT GIANT",
