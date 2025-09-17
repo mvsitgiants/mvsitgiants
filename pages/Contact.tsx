@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
         title="Contact MVS IT GIANT | Software Development Company | Get In Touch"
         description="Contact MVS IT GIANT for expert software development services. Reach out for custom software development, mobile app development, cloud solutions, and IT consulting. Located in Bangalore, India."
         keywords="contact MVS IT GIANT, software development company contact, custom software development inquiry, mobile app development consultation, cloud solutions contact, IT consulting services, Bangalore software company contact"
-        canonical="https://mvsitgiants.com/contact"
+        canonical="https://mvsitgiant.com/contact"
         structuredData={contactStructuredData}
       />
       <ToastContainer aria-label="Toast notifications" />

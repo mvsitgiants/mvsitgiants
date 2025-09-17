@@ -144,7 +144,7 @@ const Services: React.FC = () => {
         title="Software Development Services | Custom Software, Mobile Apps & Cloud Solutions - MVS IT GIANT"
         description="Discover our comprehensive software development services including custom software development, mobile app development, cloud solutions, AI/ML, UI/UX design, and IT consulting. Expert solutions for your business needs."
         keywords="software development services, custom software development, mobile app development, cloud solutions, DevOps, AI machine learning services, UI UX design services, IT consulting, web development services, enterprise software solutions"
-        canonical="https://mvsitgiants.com/services"
+        canonical="https://mvsitgiant.com/services"
         structuredData={servicesStructuredData}
       />
       <Hero

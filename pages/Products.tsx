@@ -104,7 +104,7 @@ const Products: React.FC = () => {
         title="Software Products & Solutions | Hospital Management, POS System, School Management - MVS IT GIANT"
         description="Explore our innovative software products including hospital management system, restaurant management software, school management system, and next-gen POS systems. Built with modern technology for optimal performance."
         keywords="hospital management system, restaurant management software, school management system, POS system, healthcare IT solutions, educational software, hospitality technology, retail management software, enterprise software products"
-        canonical="https://mvsitgiants.com/products"
+        canonical="https://mvsitgiant.com/products"
         structuredData={productsStructuredData}
       />
       <Hero

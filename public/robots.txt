@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mvsitgiants.com/sitemap.xml
+Sitemap: https://mvsitgiant.com/sitemap.xml
 
 # Allow all search engines to crawl all content
 Disallow:

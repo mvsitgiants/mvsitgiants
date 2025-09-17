@@ -110,24 +110,48 @@ const Home: React.FC = () => {
         icon: <DeployIcon />,
         title: 'Startup Agility, Enterprise Expertise',
         description: 'As a nimble startup, we move fast and adapt quickly. Combined with our deep technical expertise, you get the best of both worlds: innovative solutions delivered with professional precision.',
+        additionalContent: [
+            'Rapid prototyping and iterative development cycles',
+            'Enterprise-grade security and scalability standards',
+            'Agile methodologies with proven industry practices',
+            '24/7 support and maintenance services'
+        ],
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1740&auto=format&fit=crop'
     },
     {
         icon: <ChipIcon />,
         title: 'Innovative & Youthful Energy',
         description: 'Our team is composed of bright, passionate, and innovative minds who are experts in the latest technologies, bringing fresh perspectives and creative energy to every project.',
+        additionalContent: [
+            'Cutting-edge AI/ML and cloud technologies',
+            'Modern frameworks and development tools',
+            'Continuous learning and skill development',
+            'Creative problem-solving approaches'
+        ],
         image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop'
     },
     {
         icon: <PersonalizeIcon />,
         title: 'Creative & Tailored Solutions',
         description: "We don't believe in one-size-fits-all. We dive deep into your unique challenges to craft custom, creative solutions that are perfectly aligned with your business goals.",
+        additionalContent: [
+            'Comprehensive requirement analysis and planning',
+            'Custom UI/UX design tailored to your brand',
+            'Scalable architecture for future growth',
+            'Integration with existing systems and workflows'
+        ],
         image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1740&auto=format&fit=crop'
     },
     {
         icon: <ConnectIcon />,
         title: 'An Invaluable Partnership',
         description: "We see ourselves as an extension of your team. Our transparent communication and collaborative approach make us more than just a vendor—we're an invaluable partner in your growth.",
+        additionalContent: [
+            'Regular progress updates and milestone reviews',
+            'Dedicated project managers and technical leads',
+            'Long-term strategic technology planning',
+            'Training and knowledge transfer sessions'
+        ],
         image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1740&auto=format&fit=crop'
     }
   ];
@@ -148,16 +172,16 @@ const Home: React.FC = () => {
     "@type": "WebSite",
     "name": "MVS IT GIANT",
     "description": "Leading software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
-    "url": "https://mvsitgiants.com",
+    "url": "https://mvsitgiant.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://mvsitgiants.com/search?q={search_term_string}",
+      "target": "https://mvsitgiant.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
       "name": "MVS IT GIANT",
-      "logo": "https://mvsitgiants.com/logomvs.png"
+      "logo": "https://mvsitgiant.com/logomvs.png"
     }
   };
 
@@ -167,7 +191,7 @@ const Home: React.FC = () => {
         title="MVS IT GIANT - Leading Software Development Company | Custom Software, Mobile Apps & IT Solutions"
         description="Transform your business with MVS IT GIANT' innovative software development services. We specialize in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. Based in Bangalore, India."
         keywords="software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting, Bangalore software company, digital transformation, enterprise software solutions"
-        canonical="https://mvsitgiants.com"
+        canonical="https://mvsitgiant.com"
         structuredData={homeStructuredData}
       />
       {/* Hero Section - Added By Bhushan on 15_01_2025 - Fixed navbar overlap issue */}
@@ -387,18 +411,26 @@ const Home: React.FC = () => {
 
             <div className="max-w-6xl mx-auto space-y-24">
                 {advantages.map((advantage, index) => (
-                    <div key={index} className="flex flex-wrap items-center gap-x-12 gap-y-8">
+                    <div key={index} className="flex flex-wrap items-start gap-x-12 gap-y-8">
                         <div className={`w-full md:flex-1 ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                             <img src={advantage.image} alt={advantage.title} className="rounded-lg shadow-2xl w-full h-auto object-cover" style={{maxHeight: '400px'}} />
+                             <img src={advantage.image} alt={advantage.title} className={`w-full h-full object-cover ${index % 2 !== 0 ? 'rounded-tr-5xl' : 'rounded-tl-5xl'}`} style={{aspectRatio: '1/1', maxHeight: '400px', boxShadow: '0 25px 50px -12px rgba(7, 45, 148, 0.66)'}} />
                         </div>
                         <div className={`w-full md:flex-1 ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
-                            <div className="flex items-center mb-4">
+                            <div className="flex items-start mb-4">
                                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-secondary text-accent shadow-lg mr-4 flex-shrink-0">
                                     {React.cloneElement(advantage.icon, { className: "h-7 w-7" })}
                                 </div>
                                 <h3 className="text-2xl font-bold text-primary">{advantage.title}</h3>
                             </div>
-                            <p className="text-muted leading-relaxed text-lg">{advantage.description}</p>
+                            <p className="text-muted leading-relaxed text-lg mb-6">{advantage.description}</p>
+                            <ul className="space-y-3">
+                                {advantage.additionalContent.map((item, itemIndex) => (
+                                    <li key={itemIndex} className="flex items-start">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2 mr-3"></div>
+                                        <span className="text-muted text-base leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 ))}

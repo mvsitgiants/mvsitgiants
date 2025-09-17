@@ -94,7 +94,7 @@ const Careers: React.FC = () => {
         title="Careers at MVS IT GIANT | Software Development Jobs | Join Our Team"
         description="Join MVS IT GIANT and be part of our innovative software development team. Explore exciting career opportunities in frontend development, DevOps, UX/UI design, and product management. Remote and on-site positions available."
         keywords="careers at MVS IT GIANT, software development jobs, frontend developer jobs, DevOps engineer jobs, UX UI designer jobs, product manager jobs, technology careers, software company jobs Bangalore, remote software jobs"
-        canonical="https://mvsitgiants.com/careers"
+        canonical="https://mvsitgiant.com/careers"
         structuredData={careersStructuredData}
       />
       <Hero

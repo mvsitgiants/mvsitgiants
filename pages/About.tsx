@@ -79,7 +79,7 @@ const About: React.FC = () => {
         title="About MVS IT GIANT | Leading Software Development Company | Our Story & Team"
         description="Learn about MVS IT GIANT, a premier software development company founded in 2020. Discover our story, core values, and the passionate team behind our innovative technology solutions and digital transformation services."
         keywords="about MVS IT GIANT, software development company story, technology company Bangalore, software development team, company values, digital transformation experts, innovative software solutions, technology leadership"
-        canonical="https://mvsitgiants.com/about"
+        canonical="https://mvsitgiant.com/about"
         structuredData={aboutStructuredData}
       />
       <Hero
