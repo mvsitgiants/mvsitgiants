@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import TeamMemberCard from '../components/TeamMember';
 import type { TeamMember } from '../types';
 import CTA from '../components/CTA';
 import SEO from '../components/SEO';
+import { AnalyticsService } from '../services/analyticsService';
 import CodeIcon from '../components/icons/CodeIcon';
 import UserCheckIcon from '../components/icons/UserCheckIcon';
 import ConnectIcon from '../components/icons/ConnectIcon';
@@ -41,12 +42,18 @@ const values = [
 ];
 
 const About: React.FC = () => {
+  // Track page view on component mount
+  useEffect(() => {
+    AnalyticsService.trackAboutPageView();
+  }, []);
+
   // SEO structured data for About page - Added By Bhushan on 15_01_2025
   const aboutStructuredData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About MVS IT GIANT",
-    "description": "Learn about MVS IT GIANT, a leading software development company founded in 2022. Discover our story, values, and the passionate team behind our innovative technology solutions.",
+        "name": "About MVS IT GIANT",
+        "alternateName": ["About MVS IT Giants", "About MVS"],
+        "description": "Learn about MVS IT GIANT (MVS IT Giants), a leading software development company founded in 2020. Discover our story, values, and the passionate team behind our innovative technology solutions.",
     "mainEntity": {
       "@type": "Organization",
       "name": "MVS IT GIANT",
@@ -76,9 +83,9 @@ const About: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="About MVS IT GIANT | Leading Software Development Company | Our Story & Team"
-        description="Learn about MVS IT GIANT, a premier software development company founded in 2020. Discover our story, core values, and the passionate team behind our innovative technology solutions and digital transformation services."
-        keywords="about MVS IT GIANT, software development company story, technology company Bangalore, software development team, company values, digital transformation experts, innovative software solutions, technology leadership"
+        title="About MVS IT GIANT | MVS IT Giants | Leading Software Development Company | Our Story & Team"
+        description="Learn about MVS IT GIANT (MVS IT Giants), a premier software development company founded in 2020. Discover our story, core values, and the passionate team behind our innovative technology solutions and digital transformation services."
+        keywords="about MVS IT GIANT, MVS IT Giants, MVS, software development company story, technology company Bangalore, software development team, company values, digital transformation experts, innovative software solutions, technology leadership"
         canonical="https://mvsitgiant.com/about"
         structuredData={aboutStructuredData}
       />
@@ -95,10 +102,10 @@ const About: React.FC = () => {
             <div className="order-2 md:order-1">
               <h2 className="text-3xl font-extrabold text-primary mb-4 sm:text-4xl lg:text-5xl">Our Story</h2>
               <p className="text-muted mb-4 text-lg">
-                Founded in 2020, MVS IT GIANT was born from a shared vision: to create a software company that not only delivered technically excellent products but also fostered true partnerships with its clients. We saw a gap between what businesses needed and what traditional development shops offered.
+                Founded in 2020, MVS IT GIANT (also known as MVS IT Giants) was born from a shared vision: to create a software company that not only delivered technically excellent products but also fostered true partnerships with its clients. We saw a gap between what businesses needed and what traditional development shops offered.
               </p>
               <p className="text-muted text-lg">
-                We set out to bridge that gap by combining deep technical expertise with a collaborative, transparent approach. Today, we are proud to have helped dozens of startups and enterprises launch successful digital products and transform their operations.
+                We set out to bridge that gap by combining deep technical expertise with a collaborative, transparent approach. Today, MVS IT GIANT is proud to have helped dozens of startups and enterprises launch successful digital products and transform their operations.
               </p>
             </div>
             <div className="order-1 md:order-2">

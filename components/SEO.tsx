@@ -13,8 +13,8 @@ interface SEOProps {
 // Added By Bhushan on 15_01_2025 - SEO component for dynamic meta tags
 const SEO: React.FC<SEOProps> = ({
   title = "MVS IT GIANT - Leading Software Development Company",
-  description = "MVS IT GIANT is a premier software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
-  keywords = "mvs it giant, mvsitgiants,mvsit giant,software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting",
+  description = "MVS IT GIANT (MVS IT Giants) is a premier software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
+  keywords = "MVS, MVS IT GIANT, MVS IT Giants, MVS IT Giant, mvsitgiants, software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting",
   canonical = "https://mvsitgiant.com",
   ogImage = "https://mvsitgiant.com/logomvs.png",
   ogType = "website",

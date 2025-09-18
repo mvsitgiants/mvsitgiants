@@ -1,12 +1,11 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CTA from '../components/CTA';
 import VisionSection from '../components/VisionSection';
+import ServicesSection from '../components/ServicesSection';
 import SEO from '../components/SEO';
-import CodeIcon from '../components/icons/CodeIcon';
-import CloudIcon from '../components/icons/CloudIcon';
-import DeviceMobileIcon from '../components/icons/DeviceMobileIcon';
+import { AnalyticsService } from '../services/analyticsService';
 import CheckCircleIcon from '../components/icons/CheckCircleIcon';
 import ConnectIcon from '../components/icons/ConnectIcon';
 import ExploreIcon from '../components/icons/ExploreIcon';
@@ -17,42 +16,12 @@ import AssistIcon from '../components/icons/AssistIcon';
 import FlagIcon from '../components/icons/FlagIcon';
 import DeployIcon from '../components/icons/DeployIcon';
 import ChipIcon from '../components/icons/ChipIcon';
-import DesignIcon from '../components/icons/DesignIcon';
-import CogIcon from '../components/icons/CogIcon';
 
 const Home: React.FC = () => {
-  const heroServices = [
-    {
-      icon: <CodeIcon className="h-8 w-8 text-accent" />,
-      title: 'Custom Software',
-      description: 'Bespoke solutions for your unique business needs.',
-    },
-    {
-      icon: <DeviceMobileIcon className="h-8 w-8 text-accent" />,
-      title: 'Mobile Applications',
-      description: 'Engaging iOS and Android apps for users on the go.',
-    },
-    {
-      icon: <CloudIcon className="h-8 w-8 text-accent" />,
-      title: 'Cloud & DevOps',
-      description: 'Infrastructure automation, CI/CD, and cloud migration.',
-    },
-    {
-      icon: <ChipIcon className="h-8 w-8 text-accent" />,
-      title: 'AI & Machine Learning',
-      description: 'Unlock the potential of your data with intelligent solutions.',
-    },
-    {
-      icon: <DesignIcon className="h-8 w-8 text-accent" />,
-      title: 'UI/UX Design',
-      description: 'Crafting intuitive and visually stunning user experiences.',
-    },
-    {
-      icon: <CogIcon className="h-8 w-8 text-accent" />,
-      title: 'IT Consulting',
-      description: 'Strategic guidance to align technology with business goals.',
-    },
-  ];
+  // Track page view on component mount
+  useEffect(() => {
+    AnalyticsService.trackPageView('home', 'MVS IT GIANT - Leading Software Development Company');
+  }, []);
 
   const processSteps = [
     {
@@ -171,6 +140,7 @@ const Home: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "MVS IT GIANT",
+    "alternateName": ["MVS IT Giants", "MVS IT Giant", "MVS"],
     "description": "Leading software development company offering custom software development, mobile app development, cloud solutions, AI/ML services, and IT consulting.",
     "url": "https://mvsitgiant.com",
     "potentialAction": {
@@ -182,64 +152,80 @@ const Home: React.FC = () => {
       "@type": "Organization",
       "name": "MVS IT GIANT",
       "logo": "https://mvsitgiant.com/logomvs.png"
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MVS IT GIANT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MVS IT GIANT (also known as MVS IT Giants) is a leading software development company specializing in custom software development, mobile app development, cloud solutions, and AI/ML technologies. We help businesses transform digitally with innovative technology solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does MVS IT GIANT offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MVS IT GIANT offers comprehensive software development services including custom software development, mobile app development, web development, cloud solutions, AI/ML services, UI/UX design, DevOps, and IT consulting. We serve clients worldwide from our base in Bangalore, India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why choose MVS IT GIANT for software development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MVS IT GIANT combines startup agility with enterprise expertise. Our team of innovative developers uses cutting-edge technologies to deliver scalable, secure, and user-friendly software solutions. We follow agile methodologies and provide transparent communication throughout the development process."
+          }
+        }
+      ]
     }
   };
 
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="MVS IT GIANT - Leading Software Development Company | Custom Software, Mobile Apps & IT Solutions"
-        description="Transform your business with MVS IT GIANT' innovative software development services. We specialize in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. Based in Bangalore, India."
-        keywords="software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting, Bangalore software company, digital transformation, enterprise software solutions"
+        title="MVS IT GIANT - Leading Software Development Company | MVS IT Giants | Custom Software, Mobile Apps & IT Solutions"
+        description="Transform your business with MVS IT GIANT (MVS IT Giants) innovative software development services. We specialize in custom software development, mobile app development, cloud solutions, AI/ML, and IT consulting. Based in Bangalore, India."
+        keywords="MVS, MVS IT GIANT, MVS IT Giants, MVS IT Giant, software development company, custom software development, mobile app development, web development, cloud solutions, AI machine learning, UI UX design, DevOps, IT consulting, Bangalore software company, digital transformation, enterprise software solutions"
         canonical="https://mvsitgiant.com"
         structuredData={homeStructuredData}
       />
-      {/* Hero Section - Added By Bhushan on 15_01_2025 - Fixed navbar overlap issue */}
-      <div className="relative flex flex-col items-center justify-center w-full min-h-screen px-4" style={{ paddingTop: '80px' }}>
+      {/* Hero Section - Enhanced Mobile Responsiveness */}
+      <div className="relative flex flex-col items-center justify-center w-full min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
         <div className="absolute top-0 left-0 w-full h-full bg-center bg-cover" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop')` }}>
           <span id="blackOverlay" className="w-full h-full absolute opacity-70 bg-light"></span>
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full max-w-7xl mx-auto">
           {/* Text Content */}
-          <div className="text-center">
-            <h1 className="text-primary font-semibold text-4xl md:text-5xl leading-tight">
-              MVS IT GIANT: <span className="text-accent">Leading Software Development Company</span>
+          <div className="text-center px-4 sm:px-6 lg:px-8">
+            <h1 className="text-primary font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight">
+              MVS IT GIANT: <span className="text-accent block sm:inline">Leading Software Development Company</span>
             </h1>
-            <p className="mt-4 text-lg text-hero-text max-w-4xl mx-auto">
-              We are a premier software development company specializing in custom software development, mobile app development, cloud solutions, and AI/ML technologies. Our expert team delivers innovative digital solutions that transform businesses and drive growth.
+            <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-hero-text max-w-4xl mx-auto leading-relaxed">
+              MVS IT GIANT (also known as MVS IT Giants) is a premier software development company specializing in custom software development, mobile app development, cloud solutions, and AI/ML technologies. Our expert team delivers innovative digital solutions that transform businesses and drive growth.
             </p>
           </div>
         
-          {/* Scrollable Services - Added By Bhushan on 15_01_2025 - Fixed mobile horizontal scroll */}
-          <div className="w-full max-w-7xl mx-auto mt-12 mb-10">
-            <div className="flex space-x-4 sm:space-x-6 pb-4 overflow-x-auto no-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-              <div className="flex-shrink-0 w-2 sm:w-0"></div>
-              {heroServices.map((service, index) => (
-                <div key={index} className="flex-shrink-0 w-60 sm:w-64 bg-white/60 backdrop-blur-lg p-6 rounded-xl border border-slate-300/30 shadow-lg text-left transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
-                  <div className="mb-4">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-primary mb-2">{service.title}</h3>
-                  <p className="text-muted text-sm leading-relaxed">{service.description}</p>
-                </div>
-              ))}
-              <div className="flex-shrink-0 w-2 sm:w-0"></div>
-            </div>
-          </div>
-
           {/* Hero CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 w-full max-w-md sm:max-w-none px-4 sm:px-0 pb-6 sm:pb-0">
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-accent text-base font-medium rounded-md text-accent bg-transparent hover:bg-accent hover:text-light transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
+                aria-label="Learn more about our services"
+                onClick={() => AnalyticsService.trackCustomEvent('cta_clicked', { cta_type: 'services', location: 'hero' })}
+                className="inline-flex items-center justify-center px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 border-2 border-accent text-sm sm:text-base md:text-lg font-semibold md:font-bold rounded-full text-accent bg-transparent hover:bg-accent hover:text-light transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl shadow-accent/20 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light w-full sm:w-auto min-h-[48px]"
               >
                 More About Services
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-light bg-accent hover:bg-accent/80 transition-transform transform hover:scale-105 shadow-lg w-full sm:w-auto"
+                aria-label="Start a project with MVS IT GIANT"
+                onClick={() => AnalyticsService.trackCustomEvent('cta_clicked', { cta_type: 'contact', location: 'hero' })}
+                className="inline-flex items-center justify-center px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 border border-transparent text-sm sm:text-base md:text-lg font-semibold md:font-bold rounded-full text-light bg-accent hover:bg-accent/90 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl shadow-accent/30 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light w-full sm:w-auto min-h-[48px]"
               >
                 Start a Project
               </Link>
@@ -248,12 +234,12 @@ const Home: React.FC = () => {
       </div>
       
       {/* Your Partner in Digital Transformation Section */}
-      <section className="py-24 bg-light">
-        <div className="container mx-auto px-4">
-            <div className="flex flex-wrap items-center">
-                <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mb-10 md:mb-0">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <div className="w-full lg:w-5/12 order-2 lg:order-1">
                     <div className="relative">
-                        <div className="absolute -left-4 -top-4 w-full h-full bg-accent/20 rounded-lg transform rotate-[-3deg]"></div>
+                        <div className="absolute -left-2 sm:-left-4 -top-2 sm:-top-4 w-full h-full bg-accent/20 rounded-lg transform rotate-[-3deg]"></div>
                         <img
                           alt="Our Commitment"
                           className="w-full align-middle rounded-lg shadow-xl relative"
@@ -261,51 +247,51 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
-                    <div className="md:pl-12">
-                        <h3 className="text-4xl md:text-5xl mb-4 font-extrabold text-primary leading-tight">
+                <div className="w-full lg:w-6/12 order-1 lg:order-2">
+                    <div className="lg:pl-8 xl:pl-12">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold text-primary leading-tight">
                             Your <span className="text-accent">Partner</span> in Digital Transformation
                         </h3>
-                        <p className="text-lg leading-relaxed mt-4 mb-8 text-muted">
+                        <p className="text-base sm:text-lg leading-relaxed mt-4 mb-6 sm:mb-8 text-muted">
                             Beyond code, we forge lasting partnerships. Our mission is to deeply understand your vision and apply technical excellence to bring it to life, ensuring a transparent and precise journey from concept to reality.
                         </p>
-                        <ul className="list-none space-y-6">
+                        <ul className="list-none space-y-4 sm:space-y-6">
                             <li>
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-secondary text-accent shadow-md">
-                                            <CheckCircleIcon className="h-7 w-7"/>
+                                        <div className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-secondary text-accent shadow-md">
+                                            <CheckCircleIcon className="h-5 w-5 sm:h-7 sm:w-7"/>
                                         </div>
                                     </div>
-                                    <div className="ml-4">
-                                        <h4 className="text-xl font-bold text-primary">User-Centric Design</h4>
-                                        <p className="text-muted mt-1">Crafting intuitive and engaging experiences that delight your users.</p>
+                                    <div className="ml-3 sm:ml-4">
+                                        <h4 className="text-lg sm:text-xl font-bold text-primary">User-Centric Design</h4>
+                                        <p className="text-sm sm:text-base text-muted mt-1">Crafting intuitive and engaging experiences that delight your users.</p>
                                     </div>
                                 </div>
                             </li>
                              <li>
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-secondary text-accent shadow-md">
-                                            <CheckCircleIcon className="h-7 w-7"/>
+                                        <div className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-secondary text-accent shadow-md">
+                                            <CheckCircleIcon className="h-5 w-5 sm:h-7 sm:w-7"/>
                                         </div>
                                     </div>
-                                    <div className="ml-4">
-                                        <h4 className="text-xl font-bold text-primary">Clean, Scalable Code</h4>
-                                        <p className="text-muted mt-1">Building robust and maintainable solutions that grow with your business.</p>
+                                    <div className="ml-3 sm:ml-4">
+                                        <h4 className="text-lg sm:text-xl font-bold text-primary">Clean, Scalable Code</h4>
+                                        <p className="text-sm sm:text-base text-muted mt-1">Building robust and maintainable solutions that grow with your business.</p>
                                     </div>
                                 </div>
                             </li>
                              <li>
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-secondary text-accent shadow-md">
-                                            <CheckCircleIcon className="h-7 w-7"/>
+                                        <div className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-secondary text-accent shadow-md">
+                                            <CheckCircleIcon className="h-5 w-5 sm:h-7 sm:w-7"/>
                                         </div>
                                     </div>
-                                    <div className="ml-4">
-                                        <h4 className="text-xl font-bold text-primary">Transparent Communication</h4>
-                                        <p className="text-muted mt-1">Keeping you informed and involved at every stage of the project lifecycle.</p>
+                                    <div className="ml-3 sm:ml-4">
+                                        <h4 className="text-lg sm:text-xl font-bold text-primary">Transparent Communication</h4>
+                                        <p className="text-sm sm:text-base text-muted mt-1">Keeping you informed and involved at every stage of the project lifecycle.</p>
                                     </div>
                                 </div>
                             </li>
@@ -315,16 +301,27 @@ const Home: React.FC = () => {
             </div>
         </div>
       </section>
-
+ {/* Services Section */}
+ <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-light">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12 sm:mb-16 md:mb-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">Our Services</h2>
+      <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-muted">
+        We offer a wide range of services to meet the diverse needs of our clients.
+      </p>
+    </div>
+  </div>
+  <ServicesSection />
+ </section>
       {/* Vision Section */}
       <VisionSection />
 
       {/* Our Proven Process Section */}
-      <section className="py-20 bg-secondary overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 lg:mb-20">
-            <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">Our Proven Process</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-muted">
+      <section className="py-12 sm:py-16 md:py-20 bg-secondary overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary">Our Proven Process</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-muted">
               A collaborative journey designed for your success.
             </p>
           </div>
@@ -377,17 +374,17 @@ const Home: React.FC = () => {
           </div>
 
           {/* Mobile Vertical Layout */}
-          <div className="lg:hidden space-y-8">
+          <div className="lg:hidden space-y-4 sm:space-y-6">
             {processSteps.map((step) => (
-              <div key={step.title} className="flex items-start gap-4 bg-light p-4 rounded-lg shadow-md">
+              <div key={step.title} className="flex items-start gap-3 sm:gap-4 bg-light p-4 sm:p-6 rounded-lg shadow-md">
                 <div className="flex-shrink-0">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${colorVariants[step.color].bg}`}>
-                    {React.cloneElement(step.icon, { className: 'w-8 h-8 text-white' })}
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center ${colorVariants[step.color].bg}`}>
+                    {React.cloneElement(step.icon, { className: 'w-6 h-6 sm:w-8 sm:h-8 text-white' })}
                   </div>
                 </div>
-                <div>
-                  <h3 className={`text-lg font-bold ${colorVariants[step.color].text}`}>{step.number}. {step.title}</h3>
-                  <div className="text-sm text-muted mt-1 space-y-1">
+                <div className="flex-1">
+                  <h3 className={`text-base sm:text-lg font-bold ${colorVariants[step.color].text}`}>{step.number}. {step.title}</h3>
+                  <div className="text-xs sm:text-sm text-muted mt-1 space-y-1">
                      {Array.isArray(step.description) ? step.description.map((d, i) => <p key={i}>{d}</p>) : <p>{step.description}</p>}
                   </div>
                 </div>
@@ -398,36 +395,36 @@ const Home: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-light">
-        <div className="container mx-auto px-4">
-            <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">
                 Why Choose <span className="text-accent">MVS IT GIANT?</span>
                 </h2>
-                <p className="mt-4 max-w-3xl mx-auto text-xl text-muted">
+                <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-muted">
                 Your success is our bottom line. Here's what makes us different.
                 </p>
             </div>
 
-            <div className="max-w-6xl mx-auto space-y-24">
+            <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24">
                 {advantages.map((advantage, index) => (
-                    <div key={index} className="flex flex-wrap items-start gap-x-12 gap-y-8">
-                        <div className={`w-full md:flex-1 ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                             <img src={advantage.image} alt={advantage.title} className={`w-full h-full object-cover ${index % 2 !== 0 ? 'rounded-tr-5xl' : 'rounded-tl-5xl'}`} style={{aspectRatio: '1/1', maxHeight: '400px', boxShadow: '0 25px 50px -12px rgba(7, 45, 148, 0.66)'}} />
+                    <div key={index} className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
+                        <div className={`w-full lg:flex-1 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                             <img src={advantage.image} alt={advantage.title} className={`w-full h-full object-cover ${index % 2 !== 0 ? 'rounded-tr-3xl lg:rounded-tr-5xl' : 'rounded-tl-3xl lg:rounded-tl-5xl'}`} style={{aspectRatio: '1/1', maxHeight: '300px', boxShadow: '0 25px 50px -12px rgba(7, 45, 148, 0.66)'}} />
                         </div>
-                        <div className={`w-full md:flex-1 ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
+                        <div className={`w-full lg:flex-1 ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
                             <div className="flex items-start mb-4">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-secondary text-accent shadow-lg mr-4 flex-shrink-0">
-                                    {React.cloneElement(advantage.icon, { className: "h-7 w-7" })}
+                                <div className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-secondary text-accent shadow-lg mr-3 sm:mr-4 flex-shrink-0">
+                                    {React.cloneElement(advantage.icon, { className: "h-5 w-5 sm:h-7 sm:w-7" })}
                                 </div>
-                                <h3 className="text-2xl font-bold text-primary">{advantage.title}</h3>
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary">{advantage.title}</h3>
                             </div>
-                            <p className="text-muted leading-relaxed text-lg mb-6">{advantage.description}</p>
-                            <ul className="space-y-3">
+                            <p className="text-muted leading-relaxed text-sm sm:text-base md:text-lg mb-4 sm:mb-6">{advantage.description}</p>
+                            <ul className="space-y-2 sm:space-y-3">
                                 {advantage.additionalContent.map((item, itemIndex) => (
                                     <li key={itemIndex} className="flex items-start">
-                                        <div className="flex-shrink-0 w-2 h-2 bg-accent rounded-full mt-2 mr-3"></div>
-                                        <span className="text-muted text-base leading-relaxed">{item}</span>
+                                        <div className="flex-shrink-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full mt-2 mr-2 sm:mr-3"></div>
+                                        <span className="text-muted text-xs sm:text-sm md:text-base leading-relaxed">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -435,6 +432,47 @@ const Home: React.FC = () => {
                     </div>
                 ))}
             </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for SEO */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">
+              Frequently Asked Questions About <span className="text-accent">MVS IT GIANT</span>
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-muted">
+              Get answers to common questions about our software development services and solutions.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-lg font-bold text-primary mb-3">What is MVS IT GIANT?</h3>
+              <p className="text-muted">MVS IT GIANT (also known as MVS IT Giants) is a leading software development company specializing in custom software development, mobile app development, cloud solutions, and AI/ML technologies. We help businesses transform digitally with innovative technology solutions.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-lg font-bold text-primary mb-3">What services does MVS IT GIANT offer?</h3>
+              <p className="text-muted">MVS IT GIANT offers comprehensive software development services including custom software development, mobile app development, web development, cloud solutions, AI/ML services, UI/UX design, DevOps, and IT consulting. We serve clients worldwide from our base in Bangalore, India.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-lg font-bold text-primary mb-3">Why choose MVS IT GIANT for software development?</h3>
+              <p className="text-muted">MVS IT GIANT combines startup agility with enterprise expertise. Our team of innovative developers uses cutting-edge technologies to deliver scalable, secure, and user-friendly software solutions. We follow agile methodologies and provide transparent communication throughout the development process.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-lg font-bold text-primary mb-3">What industries does MVS IT GIANT serve?</h3>
+              <p className="text-muted">MVS IT GIANT serves various industries including healthcare (hospital management systems), education (school management systems), hospitality (restaurant management software), retail (POS systems), and many others. We create custom solutions tailored to specific industry needs.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-lg font-bold text-primary mb-3">How can I contact MVS IT GIANT?</h3>
+              <p className="text-muted">You can contact MVS IT GIANT through our website contact form, email at mvsitgiants@gmail.com, or phone at +91-9792540100. We're based in Bangalore, India, and serve clients globally. Our team is ready to discuss your software development needs.</p>
+            </div>
+          </div>
         </div>
       </section>
 

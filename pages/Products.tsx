@@ -12,19 +12,19 @@ import ServerIcon from '../components/icons/ServerIcon';
 
 const products: Product[] = [
   {
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1548&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3',
     name: 'Advanced Restaurant Management Suite',
     category: 'Hospitality Tech',
     description: 'Elevate your dining experience with our end-to-end solution for table reservations, order management, inventory control, and customer loyalty programs.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1932&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1732&auto=format&fit=crop&ixlib=rb-4.0.3',
     name: 'Integrated School Management System',
     category: 'EdTech',
     description: 'Empower educators and students with our comprehensive system for admissions, attendance, grade tracking, and parent-teacher communication.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1583209814683-c023dd293cc6?q=80&w=1740&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3',
     name: 'Next-Gen POS System',
     category: 'Retail & E-commerce',
     description: 'A powerful and intuitive Point of Sale system that simplifies transactions, manages inventory in real-time, and provides detailed sales analytics to grow your business.',
@@ -62,11 +62,13 @@ const Products: React.FC = () => {
     "description": "Comprehensive software products including hospital management system, restaurant management software, school management system, and POS systems.",
     "brand": {
       "@type": "Brand",
-      "name": "MVS IT GIANT"
+      "name": "MVS IT GIANT",
+      "alternateName": ["MVS IT Giants", "MVS IT Giant", "MVS"]
     },
     "manufacturer": {
       "@type": "Organization",
-      "name": "MVS IT GIANT"
+      "name": "MVS IT GIANT",
+      "alternateName": ["MVS IT Giants", "MVS IT Giant", "MVS"]
     },
     "offers": {
       "@type": "Offer",
@@ -101,9 +103,9 @@ const Products: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       <SEO
-        title="Software Products & Solutions | Hospital Management, POS System, School Management - MVS IT GIANT"
-        description="Explore our innovative software products including hospital management system, restaurant management software, school management system, and next-gen POS systems. Built with modern technology for optimal performance."
-        keywords="hospital management system, restaurant management software, school management system, POS system, healthcare IT solutions, educational software, hospitality technology, retail management software, enterprise software products"
+        title="Software Products & Solutions | MVS IT GIANT | MVS IT Giants | Hospital Management, POS System, School Management"
+        description="Explore MVS IT GIANT's (MVS IT Giants) innovative software products including hospital management system, restaurant management software, school management system, and next-gen POS systems. Built with modern technology for optimal performance."
+        keywords="MVS IT GIANT, MVS IT Giants, MVS, hospital management system, restaurant management software, school management system, POS system, healthcare IT solutions, educational software, hospitality technology, retail management software, enterprise software products"
         canonical="https://mvsitgiant.com/products"
         structuredData={productsStructuredData}
       />
